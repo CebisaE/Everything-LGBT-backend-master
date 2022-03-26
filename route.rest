@@ -1,0 +1,80 @@
+GET http://localhost:8080/
+
+################################
+//create//
+POST http://localhost:8080/products
+content-type: application/json
+
+{
+    "title":"rainbow T-shirt",
+    "price": "50.00",
+    "category": "T-shirt",
+    "img": "https://i.postimg.cc/Y0bQ8dJc/Screenshot-20220307-191825-Whats-App-min.jpg",
+    "description": "A rainbow jersey"
+}
+
+################################
+//update//
+PUT http://localhost:8081/products/6229ec0335d0a4b5debb03da
+content-type: application/json
+
+{
+    "title": "rainbow shorts",
+    "price": 250,
+    "category": "Shorts",
+    "img": "https://i.postimg.cc/SKcXKZQ6/Screenshot-20220307-191711-Whats-App-min.jpg",
+    "description": "A pair of rainbow shorts"
+
+}
+################################################################
+GET http://localhost:8081/products/6229ec0335d0a4b5debb03da
+
+
+################################
+//deleting//
+DELETE http://localhost:8081/products/6229ec0335d0a4b5debb03da
+
+################################################################
+
+//getting one//
+GET http://localhost:8081/customer/signin/623192d77ab55a246462690a/
+
+
+
+################################################################
+//registering customer//
+POST http://localhost:3000/customer/signup/
+content-type: application/json
+
+{
+    "name":"mihle",
+    "email": "mihle@gmail.com",
+    "phone_number": "0747377043",
+    "password": "cebisa"
+}
+###
+//update//
+PATCH http://localhost:3000/customer/signin/
+content-type: application/json
+
+{
+    "name":"siyanda",
+    "password": "siyanda"
+}
+
+################################
+//delete//
+DELETE http://localhost:8081/customer/622b10199a9c1e44323ba474
+
+###
+POST http://localhost:3000/contact/
+
+{
+    "name":"bongani",
+    "email":"bongani@gmail.com",
+    "message":"jhghkfdjkhjgfvjk"
+}
+
+//roles////////////////////////////////
+###
+GET http://localhost:3000/admin/
